@@ -1600,6 +1600,16 @@
         "preloadAsSound": false,
         "preloadInCache": false,
         "userAdded": false
+      },
+      {
+        "file": "Backsound3.wav",
+        "kind": "audio",
+        "metadata": "",
+        "name": "Backsound3.wav",
+        "preloadAsMusic": false,
+        "preloadAsSound": false,
+        "preloadInCache": false,
+        "userAdded": false
       }
     ],
     "resourceFolders": []
@@ -5938,6 +5948,28 @@
                 "",
                 ""
               ]
+            },
+            {
+              "type": {
+                "value": "PanelSpriteSlider::PanelSpriteSlider::SetValue"
+              },
+              "parameters": [
+                "NewSlider3",
+                "=",
+                "game.lagu",
+                ""
+              ]
+            },
+            {
+              "type": {
+                "value": "PanelSpriteSlider::PanelSpriteSlider::SetValue"
+              },
+              "parameters": [
+                "NewSlider",
+                "=",
+                "game.suara",
+                ""
+              ]
             }
           ]
         },
@@ -6115,7 +6147,7 @@
               "parameters": [
                 "\"game\"",
                 "\"game\"",
-                "ToJSON(game.lagu)"
+                "ToJSON(game)"
               ]
             }
           ]
@@ -6152,7 +6184,7 @@
               "parameters": [
                 "\"game\"",
                 "\"game\"",
-                "ToJSON(game.suara)"
+                "ToJSON(game)"
               ]
             }
           ]
@@ -6172,6 +6204,16 @@
             }
           ],
           "actions": [
+            {
+              "type": {
+                "value": "EcrireFichierTxt"
+              },
+              "parameters": [
+                "\"game\"",
+                "\"game\"",
+                "ToJSON(game)"
+              ]
+            },
             {
               "type": {
                 "value": "HideLayer"
@@ -9988,7 +10030,7 @@
               },
               "parameters": [
                 "NewSlider3",
-                "yes",
+                "no",
                 ""
               ]
             },
@@ -9998,7 +10040,7 @@
               },
               "parameters": [
                 "NewSlider",
-                "yes",
+                "no",
                 ""
               ]
             },
@@ -10010,6 +10052,71 @@
                 "back",
                 "ButtonFSM",
                 ""
+              ]
+            },
+            {
+              "type": {
+                "value": "ModVolumeMusicCanal"
+              },
+              "parameters": [
+                "",
+                "1",
+                "=",
+                "game.lagu"
+              ]
+            },
+            {
+              "type": {
+                "value": "ModVolumeMusicCanal"
+              },
+              "parameters": [
+                "",
+                "3",
+                "=",
+                "game.suara"
+              ]
+            },
+            {
+              "type": {
+                "value": "PanelSpriteSlider::PanelSpriteSlider::SetValue"
+              },
+              "parameters": [
+                "NewSlider3",
+                "=",
+                "game.lagu",
+                ""
+              ]
+            },
+            {
+              "type": {
+                "value": "PanelSpriteSlider::PanelSpriteSlider::SetValue"
+              },
+              "parameters": [
+                "NewSlider",
+                "=",
+                "game.suara",
+                ""
+              ]
+            }
+          ],
+          "events": [
+            {
+              "type": "BuiltinCommonInstructions::Standard",
+              "conditions": [],
+              "actions": [
+                {
+                  "type": {
+                    "value": "PlaySoundCanal"
+                  },
+                  "parameters": [
+                    "",
+                    "Backsound 2.wav",
+                    "1",
+                    "",
+                    "80",
+                    "1"
+                  ]
+                }
               ]
             }
           ]
@@ -10077,6 +10184,7 @@
           ]
         },
         {
+          "folded": true,
           "type": "BuiltinCommonInstructions::Standard",
           "conditions": [
             {
@@ -10532,6 +10640,7 @@
           ]
         },
         {
+          "folded": true,
           "type": "BuiltinCommonInstructions::Standard",
           "conditions": [
             {
@@ -10941,6 +11050,7 @@
           ]
         },
         {
+          "folded": true,
           "type": "BuiltinCommonInstructions::Standard",
           "conditions": [
             {
@@ -11528,13 +11638,6 @@
           ]
         },
         {
-          "type": "BuiltinCommonInstructions::Link",
-          "include": {
-            "includeConfig": 0
-          },
-          "target": "bgm"
-        },
-        {
           "type": "BuiltinCommonInstructions::Standard",
           "conditions": [
             {
@@ -11665,7 +11768,7 @@
               "parameters": [
                 "\"game\"",
                 "\"game\"",
-                "ToJSON(game.lagu)"
+                "ToJSON(game)"
               ]
             }
           ]
@@ -11702,7 +11805,7 @@
               "parameters": [
                 "\"game\"",
                 "\"game\"",
-                "ToJSON(game.suara)"
+                "ToJSON(game)"
               ]
             }
           ]
@@ -11722,6 +11825,16 @@
             }
           ],
           "actions": [
+            {
+              "type": {
+                "value": "EcrireFichierTxt"
+              },
+              "parameters": [
+                "\"game\"",
+                "\"game\"",
+                "ToJSON(game)"
+              ]
+            },
             {
               "type": {
                 "value": "HideLayer"
@@ -17968,6 +18081,50 @@
                 "yes",
                 ""
               ]
+            },
+            {
+              "type": {
+                "value": "ModVolumeMusicCanal"
+              },
+              "parameters": [
+                "",
+                "1",
+                "=",
+                "game.lagu"
+              ]
+            },
+            {
+              "type": {
+                "value": "ModVolumeMusicCanal"
+              },
+              "parameters": [
+                "",
+                "3",
+                "=",
+                "game.suara"
+              ]
+            },
+            {
+              "type": {
+                "value": "PanelSpriteSlider::PanelSpriteSlider::SetValue"
+              },
+              "parameters": [
+                "NewSlider3",
+                "=",
+                "game.lagu",
+                ""
+              ]
+            },
+            {
+              "type": {
+                "value": "PanelSpriteSlider::PanelSpriteSlider::SetValue"
+              },
+              "parameters": [
+                "NewSlider",
+                "=",
+                "game.suara",
+                ""
+              ]
             }
           ],
           "events": [
@@ -20652,7 +20809,6 @@
           "colorG": 176,
           "colorR": 74,
           "creationTime": 0,
-          "folded": true,
           "name": "Slider",
           "source": "",
           "type": "BuiltinCommonInstructions::Group",
@@ -20689,7 +20845,7 @@
                   "parameters": [
                     "\"game\"",
                     "\"game\"",
-                    "ToJSON(game.lagu)"
+                    "ToJSON(game)"
                   ]
                 }
               ]
@@ -20726,7 +20882,7 @@
                   "parameters": [
                     "\"game\"",
                     "\"game\"",
-                    "ToJSON(game.suara)"
+                    "ToJSON(game)"
                   ]
                 }
               ]
@@ -27337,7 +27493,6 @@
           "colorG": 176,
           "colorR": 74,
           "creationTime": 0,
-          "folded": true,
           "name": "Beginning",
           "source": "",
           "type": "BuiltinCommonInstructions::Group",
@@ -27504,6 +27659,50 @@
                   "parameters": [
                     "NewSlider",
                     "no",
+                    ""
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "ModVolumeMusicCanal"
+                  },
+                  "parameters": [
+                    "",
+                    "1",
+                    "=",
+                    "game.lagu"
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "ModVolumeMusicCanal"
+                  },
+                  "parameters": [
+                    "",
+                    "3",
+                    "=",
+                    "game.suara"
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "PanelSpriteSlider::PanelSpriteSlider::SetValue"
+                  },
+                  "parameters": [
+                    "NewSlider3",
+                    "=",
+                    "game.lagu",
+                    ""
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "PanelSpriteSlider::PanelSpriteSlider::SetValue"
+                  },
+                  "parameters": [
+                    "NewSlider",
+                    "=",
+                    "game.suara",
                     ""
                   ]
                 }
@@ -30566,6 +30765,16 @@
               "actions": [
                 {
                   "type": {
+                    "value": "EcrireFichierTxt"
+                  },
+                  "parameters": [
+                    "\"game\"",
+                    "\"game\"",
+                    "ToJSON(game)"
+                  ]
+                },
+                {
+                  "type": {
                     "value": "ChangeTimeScale"
                   },
                   "parameters": [
@@ -30692,7 +30901,7 @@
                   "parameters": [
                     "\"game\"",
                     "\"game\"",
-                    "ToJSON(game.lagu)"
+                    "ToJSON(game)"
                   ]
                 }
               ]
@@ -30729,7 +30938,7 @@
                   "parameters": [
                     "\"game\"",
                     "\"game\"",
-                    "ToJSON(game.suara)"
+                    "ToJSON(game)"
                   ]
                 }
               ]
@@ -37608,7 +37817,6 @@
           "colorG": 176,
           "colorR": 74,
           "creationTime": 0,
-          "folded": true,
           "name": "Beginning",
           "source": "",
           "type": "BuiltinCommonInstructions::Group",
@@ -37795,6 +38003,50 @@
                   "parameters": [
                     "NewSlider",
                     "no",
+                    ""
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "ModVolumeMusicCanal"
+                  },
+                  "parameters": [
+                    "",
+                    "1",
+                    "=",
+                    "game.lagu"
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "ModVolumeMusicCanal"
+                  },
+                  "parameters": [
+                    "",
+                    "3",
+                    "=",
+                    "game.suara"
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "PanelSpriteSlider::PanelSpriteSlider::SetValue"
+                  },
+                  "parameters": [
+                    "NewSlider3",
+                    "=",
+                    "game.lagu",
+                    ""
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "PanelSpriteSlider::PanelSpriteSlider::SetValue"
+                  },
+                  "parameters": [
+                    "NewSlider",
+                    "=",
+                    "game.suara",
                     ""
                   ]
                 }
@@ -39491,6 +39743,7 @@
           "colorG": 176,
           "colorR": 74,
           "creationTime": 0,
+          "folded": true,
           "name": "Milih jawaban",
           "source": "",
           "type": "BuiltinCommonInstructions::Group",
@@ -40094,6 +40347,16 @@
               "actions": [
                 {
                   "type": {
+                    "value": "EcrireFichierTxt"
+                  },
+                  "parameters": [
+                    "\"game\"",
+                    "\"game\"",
+                    "ToJSON(game)"
+                  ]
+                },
+                {
+                  "type": {
                     "value": "ChangeTimeScale"
                   },
                   "parameters": [
@@ -40183,7 +40446,6 @@
           "colorG": 176,
           "colorR": 74,
           "creationTime": 0,
-          "folded": true,
           "name": "Slider",
           "source": "",
           "type": "BuiltinCommonInstructions::Group",
@@ -40220,7 +40482,7 @@
                   "parameters": [
                     "\"game\"",
                     "\"game\"",
-                    "ToJSON(game.lagu)"
+                    "ToJSON(game)"
                   ]
                 }
               ]
@@ -40257,7 +40519,7 @@
                   "parameters": [
                     "\"game\"",
                     "\"game\"",
-                    "ToJSON(game.suara)"
+                    "ToJSON(game)"
                   ]
                 }
               ]
@@ -48547,6 +48809,50 @@
                     "no",
                     ""
                   ]
+                },
+                {
+                  "type": {
+                    "value": "ModVolumeMusicCanal"
+                  },
+                  "parameters": [
+                    "",
+                    "1",
+                    "=",
+                    "game.lagu"
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "ModVolumeMusicCanal"
+                  },
+                  "parameters": [
+                    "",
+                    "3",
+                    "=",
+                    "game.suara"
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "PanelSpriteSlider::PanelSpriteSlider::SetValue"
+                  },
+                  "parameters": [
+                    "NewSlider3",
+                    "=",
+                    "game.lagu",
+                    ""
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "PanelSpriteSlider::PanelSpriteSlider::SetValue"
+                  },
+                  "parameters": [
+                    "NewSlider",
+                    "=",
+                    "game.suara",
+                    ""
+                  ]
                 }
               ],
               "events": [
@@ -51808,6 +52114,16 @@
               "actions": [
                 {
                   "type": {
+                    "value": "EcrireFichierTxt"
+                  },
+                  "parameters": [
+                    "\"game\"",
+                    "\"game\"",
+                    "ToJSON(game)"
+                  ]
+                },
+                {
+                  "type": {
                     "value": "ChangeTimeScale"
                   },
                   "parameters": [
@@ -51897,7 +52213,6 @@
           "colorG": 176,
           "colorR": 74,
           "creationTime": 0,
-          "folded": true,
           "name": "Slider",
           "source": "",
           "type": "BuiltinCommonInstructions::Group",
@@ -51934,7 +52249,7 @@
                   "parameters": [
                     "\"game\"",
                     "\"game\"",
-                    "ToJSON(game.lagu)"
+                    "ToJSON(game)"
                   ]
                 }
               ]
@@ -51971,7 +52286,7 @@
                   "parameters": [
                     "\"game\"",
                     "\"game\"",
-                    "ToJSON(game.suara)"
+                    "ToJSON(game)"
                   ]
                 }
               ]
@@ -58838,6 +59153,50 @@
                     "no",
                     ""
                   ]
+                },
+                {
+                  "type": {
+                    "value": "ModVolumeMusicCanal"
+                  },
+                  "parameters": [
+                    "",
+                    "1",
+                    "=",
+                    "game.lagu"
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "ModVolumeMusicCanal"
+                  },
+                  "parameters": [
+                    "",
+                    "3",
+                    "=",
+                    "game.suara"
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "PanelSpriteSlider::PanelSpriteSlider::SetValue"
+                  },
+                  "parameters": [
+                    "NewSlider3",
+                    "=",
+                    "game.lagu",
+                    ""
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "PanelSpriteSlider::PanelSpriteSlider::SetValue"
+                  },
+                  "parameters": [
+                    "NewSlider",
+                    "=",
+                    "game.suara",
+                    ""
+                  ]
                 }
               ],
               "events": [
@@ -62313,6 +62672,16 @@
               "actions": [
                 {
                   "type": {
+                    "value": "EcrireFichierTxt"
+                  },
+                  "parameters": [
+                    "\"game\"",
+                    "\"game\"",
+                    "ToJSON(game)"
+                  ]
+                },
+                {
+                  "type": {
                     "value": "ChangeTimeScale"
                   },
                   "parameters": [
@@ -62439,7 +62808,7 @@
                   "parameters": [
                     "\"game\"",
                     "\"game\"",
-                    "ToJSON(game.lagu)"
+                    "ToJSON(game)"
                   ]
                 }
               ]
@@ -62476,7 +62845,7 @@
                   "parameters": [
                     "\"game\"",
                     "\"game\"",
-                    "ToJSON(game.suara)"
+                    "ToJSON(game)"
                   ]
                 }
               ]
@@ -62489,6 +62858,7 @@
           "colorG": 176,
           "colorR": 74,
           "creationTime": 0,
+          "folded": true,
           "name": "Info",
           "source": "",
           "type": "BuiltinCommonInstructions::Group",
@@ -70037,6 +70407,50 @@
                     "no",
                     ""
                   ]
+                },
+                {
+                  "type": {
+                    "value": "ModVolumeMusicCanal"
+                  },
+                  "parameters": [
+                    "",
+                    "1",
+                    "=",
+                    "game.lagu"
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "ModVolumeMusicCanal"
+                  },
+                  "parameters": [
+                    "",
+                    "3",
+                    "=",
+                    "game.suara"
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "PanelSpriteSlider::PanelSpriteSlider::SetValue"
+                  },
+                  "parameters": [
+                    "NewSlider3",
+                    "=",
+                    "game.lagu",
+                    ""
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "PanelSpriteSlider::PanelSpriteSlider::SetValue"
+                  },
+                  "parameters": [
+                    "NewSlider",
+                    "=",
+                    "game.suara",
+                    ""
+                  ]
                 }
               ],
               "events": [
@@ -72170,6 +72584,7 @@
           "colorG": 176,
           "colorR": 74,
           "creationTime": 0,
+          "folded": true,
           "name": "Milih Jawaban",
           "source": "",
           "type": "BuiltinCommonInstructions::Group",
@@ -73853,6 +74268,16 @@
               "actions": [
                 {
                   "type": {
+                    "value": "EcrireFichierTxt"
+                  },
+                  "parameters": [
+                    "\"game\"",
+                    "\"game\"",
+                    "ToJSON(game)"
+                  ]
+                },
+                {
+                  "type": {
                     "value": "ChangeTimeScale"
                   },
                   "parameters": [
@@ -73979,7 +74404,7 @@
                   "parameters": [
                     "\"game\"",
                     "\"game\"",
-                    "ToJSON(game.lagu)"
+                    "ToJSON(game)"
                   ]
                 }
               ]
@@ -74016,7 +74441,7 @@
                   "parameters": [
                     "\"game\"",
                     "\"game\"",
-                    "ToJSON(game.suara)"
+                    "ToJSON(game)"
                   ]
                 }
               ]
@@ -81787,6 +82212,50 @@
                     "no",
                     ""
                   ]
+                },
+                {
+                  "type": {
+                    "value": "PanelSpriteSlider::PanelSpriteSlider::SetValue"
+                  },
+                  "parameters": [
+                    "NewSlider3",
+                    "=",
+                    "game.lagu",
+                    ""
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "ModVolumeMusicCanal"
+                  },
+                  "parameters": [
+                    "",
+                    "3",
+                    "=",
+                    "game.suara"
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "ModVolumeMusicCanal"
+                  },
+                  "parameters": [
+                    "",
+                    "1",
+                    "=",
+                    "game.lagu"
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "PanelSpriteSlider::PanelSpriteSlider::SetValue"
+                  },
+                  "parameters": [
+                    "NewSlider",
+                    "=",
+                    "game.suara",
+                    ""
+                  ]
                 }
               ],
               "events": [
@@ -85509,7 +85978,6 @@
           "colorG": 176,
           "colorR": 74,
           "creationTime": 0,
-          "folded": true,
           "name": "Jeda",
           "source": "",
           "type": "BuiltinCommonInstructions::Group",
@@ -85669,6 +86137,16 @@
               "actions": [
                 {
                   "type": {
+                    "value": "EcrireFichierTxt"
+                  },
+                  "parameters": [
+                    "\"game\"",
+                    "\"game\"",
+                    "ToJSON(game)"
+                  ]
+                },
+                {
+                  "type": {
                     "value": "ChangeTimeScale"
                   },
                   "parameters": [
@@ -85795,7 +86273,7 @@
                   "parameters": [
                     "\"game\"",
                     "\"game\"",
-                    "ToJSON(game.lagu)"
+                    "ToJSON(game)"
                   ]
                 }
               ]
@@ -85832,7 +86310,7 @@
                   "parameters": [
                     "\"game\"",
                     "\"game\"",
-                    "ToJSON(game.suara)"
+                    "ToJSON(game)"
                   ]
                 }
               ]
@@ -93465,6 +93943,50 @@
                     "no",
                     ""
                   ]
+                },
+                {
+                  "type": {
+                    "value": "PanelSpriteSlider::PanelSpriteSlider::SetValue"
+                  },
+                  "parameters": [
+                    "NewSlider3",
+                    "=",
+                    "game.lagu",
+                    ""
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "ModVolumeMusicCanal"
+                  },
+                  "parameters": [
+                    "",
+                    "3",
+                    "=",
+                    "game.suara"
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "ModVolumeMusicCanal"
+                  },
+                  "parameters": [
+                    "",
+                    "1",
+                    "=",
+                    "game.lagu"
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "PanelSpriteSlider::PanelSpriteSlider::SetValue"
+                  },
+                  "parameters": [
+                    "NewSlider",
+                    "=",
+                    "game.suara",
+                    ""
+                  ]
                 }
               ],
               "events": [
@@ -96745,6 +97267,16 @@
               "actions": [
                 {
                   "type": {
+                    "value": "EcrireFichierTxt"
+                  },
+                  "parameters": [
+                    "\"game\"",
+                    "\"game\"",
+                    "ToJSON(game)"
+                  ]
+                },
+                {
+                  "type": {
                     "value": "ChangeTimeScale"
                   },
                   "parameters": [
@@ -96871,7 +97403,7 @@
                   "parameters": [
                     "\"game\"",
                     "\"game\"",
-                    "ToJSON(game.lagu)"
+                    "ToJSON(game)"
                   ]
                 }
               ]
@@ -96908,7 +97440,7 @@
                   "parameters": [
                     "\"game\"",
                     "\"game\"",
-                    "ToJSON(game.suara)"
+                    "ToJSON(game)"
                   ]
                 }
               ]
@@ -105506,6 +106038,50 @@
                     "no",
                     ""
                   ]
+                },
+                {
+                  "type": {
+                    "value": "PanelSpriteSlider::PanelSpriteSlider::SetValue"
+                  },
+                  "parameters": [
+                    "NewSlider3",
+                    "=",
+                    "game.lagu",
+                    ""
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "ModVolumeMusicCanal"
+                  },
+                  "parameters": [
+                    "",
+                    "3",
+                    "=",
+                    "game.suara"
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "ModVolumeMusicCanal"
+                  },
+                  "parameters": [
+                    "",
+                    "1",
+                    "=",
+                    "game.lagu"
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "PanelSpriteSlider::PanelSpriteSlider::SetValue"
+                  },
+                  "parameters": [
+                    "NewSlider",
+                    "=",
+                    "game.suara",
+                    ""
+                  ]
                 }
               ],
               "events": [
@@ -109950,7 +110526,7 @@
                   "parameters": [
                     "\"game\"",
                     "\"game\"",
-                    "ToJSON(game.lagu)"
+                    "ToJSON(game)"
                   ]
                 }
               ]
@@ -109987,7 +110563,7 @@
                   "parameters": [
                     "\"game\"",
                     "\"game\"",
-                    "ToJSON(game.suara)"
+                    "ToJSON(game)"
                   ]
                 }
               ]
@@ -110158,6 +110734,16 @@
                 }
               ],
               "actions": [
+                {
+                  "type": {
+                    "value": "EcrireFichierTxt"
+                  },
+                  "parameters": [
+                    "\"game\"",
+                    "\"game\"",
+                    "ToJSON(game)"
+                  ]
+                },
                 {
                   "type": {
                     "value": "ChangeTimeScale"
