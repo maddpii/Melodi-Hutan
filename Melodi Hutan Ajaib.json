@@ -51498,6 +51498,15 @@
                     "100",
                     "1"
                   ]
+                },
+                {
+                  "type": {
+                    "value": "StopSoundCanal"
+                  },
+                  "parameters": [
+                    "",
+                    "6"
+                  ]
                 }
               ],
               "events": [
@@ -52213,6 +52222,7 @@
           "colorG": 176,
           "colorR": 74,
           "creationTime": 0,
+          "folded": true,
           "name": "Slider",
           "source": "",
           "type": "BuiltinCommonInstructions::Group",
@@ -61707,7 +61717,6 @@
           "colorG": 176,
           "colorR": 74,
           "creationTime": 0,
-          "folded": true,
           "name": "Button Logic",
           "source": "",
           "type": "BuiltinCommonInstructions::Group",
@@ -61870,6 +61879,15 @@
                     "",
                     "100",
                     "1.5"
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "StopSoundCanal"
+                  },
+                  "parameters": [
+                    "",
+                    "6"
                   ]
                 }
               ],
@@ -73234,6 +73252,15 @@
                     "",
                     "100",
                     "1"
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "StopSoundCanal"
+                  },
+                  "parameters": [
+                    "",
+                    "6"
                   ]
                 }
               ],
@@ -85348,7 +85375,6 @@
           "colorG": 176,
           "colorR": 74,
           "creationTime": 0,
-          "folded": true,
           "name": "Button Logic",
           "source": "",
           "type": "BuiltinCommonInstructions::Group",
